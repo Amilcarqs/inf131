@@ -1,0 +1,50 @@
+package ej1;
+
+public class main {
+
+	public static void main(String[] args) {
+		//
+		// Aplicando la mascarad e bits 
+		int a=34;
+		int b=2;
+		// uytilizando and de compuertas logicas en el lenguaje lo transforma de forma interna cada numeroa binario
+		System.out.println(a & b );
+		// uytilizando or de compuertas logicas en el lenguaje lo transforma de forma interna cada numeroa binario
+		System.out.println(a | b);
+		// ahora aplicamos el desplazamiento hacia la derecha
+		
+		// ejemplo de bits 2 
+		/*
+		 *public static void main(String[] args) {
+		 *int a=34;
+		 *int b?1;
+		 *for(int i =0;i <6;i++){
+		 *	c=a&b;
+		 *	if(c>0){
+		 *		System.out.println("1");
+		 *		
+		 	*}else{
+		 	*	System.out.println("0");
+		 	*}
+		 	*b=b<<1,
+		 *	
+		 *}
+		 *System.out.println("0");
+		 *}
+		 * */
+		
+		int x=34;
+		int y=1,c;
+		String d="";
+		for(int i =0;i<6;i++) {
+			c= a & b;
+			if( c > 0)
+				d="1"+d;
+			else
+				d="0"+d;
+			b=b<<1;
+		}
+		System.out.println(d);
+	}
+	
+}
