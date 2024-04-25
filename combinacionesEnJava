@@ -1,0 +1,28 @@
+package holamundo;
+
+public class holamundo {
+	public static void main(String args[]){
+		int n = 3;
+		int k  =2;
+		int aux ;
+		int v[] = {1,2,3};
+		for (int i = 0; i<8;i++) {
+			aux = 7-i;
+			while((aux & 1) == 0) {				
+				aux = aux>>1;
+			}
+			if(aux==1) {
+				//System.out.println(i);
+				int aux2 = 4;
+				for (int j = 0;j<3;j++) {
+					if((i & aux2)==aux2) 	
+						System.out.print(v[j]+" ");	
+					
+					aux2=aux2>>1;
+				}
+				System.out.println();
+			}
+		}
+		
+		}
+}
