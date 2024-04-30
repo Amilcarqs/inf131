@@ -1,0 +1,81 @@
+package holamundo;
+
+import java.util.ArrayList;
+import java.util.Vector;
+//laboratorio 30 de abril de 2024
+public class holamundo {
+	public static void main(String args[]){
+		Vector <Integer> v = new Vector<Integer>();	
+		//ArrayList <Integer> v = new ArrayList<Integer>();
+		v.add(13);
+		v.add(21);
+		v.add(50);
+		v.add(7);
+		v.add(21);
+		System.out.println(v);
+		
+		//inciso a
+		System.out.println("Media: "+media(v));		
+		
+		//inciso b
+		System.out.println("Varianza: "+varianza(v));
+
+		
+		//inciso c
+		System.out.println("Desviacion estandar: "+desviacionEstandar(v));
+		
+		//inciso d
+		System.out.println("Moda: "+moda(v));
+
+		}
+	public static double media(Vector<Integer> x) {
+		double s=0;
+		for(int i = 0; i<x.size(); i++) {
+			s = s+x.get(i);
+		}
+		
+		return s/x.size();
+	}
+	public static double varianza(Vector<Integer> x) {
+		double media=0;
+		for(int i = 0; i<x.size(); i++) {
+			media = media+x.get(i);
+		}
+		media = media/x.size();
+		double s = 0;
+		for(int i = 0; i<x.size(); i++) {
+			s = s+ Math.pow((x.get(i)-media), 2);
+		}
+		return s/x.size();
+	}
+	public static double desviacionEstandar(Vector<Integer> x) {
+		double media=0;
+		for(int i = 0; i<x.size(); i++) {
+			media = media+x.get(i);}
+		media = media/x.size();
+		double s = 0;
+		for(int i = 0; i<x.size(); i++) {
+			s = s+ Math.pow((x.get(i)-media), 2);}
+		return Math.sqrt(s/x.size());
+	}
+	public static int moda(Vector<Integer> x) {
+		Vector<Integer> aux = x;
+		Vector<Integer> e = new Vector<Integer>();
+		int s = 0;
+		int elemento=0;
+		while(!aux.isEmpty()) {
+			int cont= 0;
+			e.add(aux.get(0));
+			for(int i=0; i<aux.size(); i++) {
+				if(aux.get(i) == e.get(0)) {
+					cont++;}}
+			if(cont>=s) {
+				s = cont;
+				elemento = (int)e.get(0);}	
+			aux.removeAll(e);
+			e.remove(0);
+		}
+		return elemento;
+	}
+	
+}
