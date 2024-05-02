@@ -1,7 +1,6 @@
 package patito;
-
+//ejercicio suma recusiva del patitio
 import java.util.Scanner;
-//ejerciio suma recursiva del patito
 public class Main {
 
 	public static void main(String[] args) {
@@ -13,8 +12,8 @@ public class Main {
 			n2 = in.nextInt();
 			n1= suma(n1);
 			n2 = suma(n2);
-			System.out.println(suma(n1));
-			
+			if(n2 > 9)
+				n2=(n2%6)+6;
 			long aux = (int) Math.pow(n1, n2);
 			System.out.println(suma(aux));
 		}
@@ -31,7 +30,6 @@ public class Main {
 			}
 			return suma(s);
 	}
-
 }
 
 RESULTADO DE LA EJECUCIÓN
