@@ -1,0 +1,33 @@
+LAB 09-05-2024
+
+
+claves.add(50);
+claves.add(10);
+claves.add(100);
+System.out.println("claves= "+claves);
+
+
+HashSet:
+claves= [50, 100, 10]
+
+LinkedHashSet:
+claves= [50, 10, 100]
+
+TreeSet:
+claves= [10, 50, 100]
+
+
+
+MAPAS: 
+
+HashMap;
+mapa = {50=a, 100=c, 10=b}
+
+
+LinkedHashMap;
+mapa = {50=a, 10=b, 100=c}
+
+
+TreeMap;
+mapa = {10=b, 50=a, 100=c}
+
