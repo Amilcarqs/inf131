@@ -1,0 +1,24 @@
+
+Map<Integer,String> mapa= new HashMap<Integer,String>();
+
+
+mapa.put(100, "A");
+mapa.put(10, "B");
+mapa.put(50, "C");
+
+
+HASHMAP: 
+
+Mapa= {50=C, 100=A, 10=B}
+
+
+
+LINKEDHASHMAP:
+
+Mapa= {100=A, 10=B, 50=C}
+
+
+
+TreeMap :
+
+Mapa= {10=B, 50=C, 100=A}
